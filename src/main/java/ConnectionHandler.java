@@ -35,6 +35,13 @@ public class ConnectionHandler extends Thread {
 
             Request req = new Request(reqS);
             Response res = new Response(req);
+
+//            write the final output to pw
+            pw.write(res.response.toCharArray());
+            s.close();
+            pw.close();
+            br.close();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
