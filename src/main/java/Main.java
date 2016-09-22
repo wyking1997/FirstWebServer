@@ -12,11 +12,11 @@ public class Main {
 //    this is the entry point for the program
     public static void main(String[] arg) throws Exception {
 
-        System.out.println("OK, let's go!");
         new Main().runServer();
     }
 
     public void runServer() throws Exception {
+         System.out.println("OK, let's go!");
 //       the ServerSocket creates a server on the specific port number
 //       the server will run on the 6543 port number
         serverSocket = new ServerSocket(6543);

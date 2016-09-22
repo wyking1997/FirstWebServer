@@ -29,7 +29,7 @@ public class ConnectionHandler extends Thread {
             String reqS = "";
 
             //from br we have to read out request
-            while (br.ready())
+            while (br.ready() || reqS.length()==0)
                 reqS += (char) br.read();
             System.out.println(reqS);
 
@@ -38,9 +38,9 @@ public class ConnectionHandler extends Thread {
 
 //            write the final output to pw
             pw.write(res.response.toCharArray());
-            s.close();
             pw.close();
             br.close();
+            s.close();
 
         } catch (Exception e) {
             e.printStackTrace();

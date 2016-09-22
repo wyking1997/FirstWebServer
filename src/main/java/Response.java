@@ -38,6 +38,7 @@ public class Response {
 
             response += "Server : Our Java Server/1.0 \r\n";
             response += "Content-Type: text/html \r\n";
+            response += "Connerction: close \r\n";
             response += "Content-Length: " + f.length() + "\r\n";
             response += "\r\n";
 
@@ -46,6 +47,7 @@ public class Response {
             while ((s = fis.read()) != -1){
                 response += (char) s;
             }
+            fis.close();
         } catch (FileNotFoundException e) {
             //if we do not get file the we want to have error 404
             response = response.replace("200", "404");
