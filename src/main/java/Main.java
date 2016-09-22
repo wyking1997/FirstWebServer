@@ -47,16 +47,6 @@ Tutorial:
   part1 ---> https://www.youtube.com/watch?v=WDoNm5Irf-4
   part2 ---> https://www.youtube.com/watch?v=fcWR6RnZbBg.
   part3 ---> https://www.youtube.com/watch?v=eXv5H2Y_hF4
+  part4 ---> https://www.youtube.com/watch?v=K4PoZ5ppp48
   
 */
-
-//Request:
-//GET / HTTP/1.1
-//Accept: text/html, application/xhtml+xml, image/jxr, */*
-//        Accept-Language: en-US,en;q=0.8,ro-RO;q=0.5,ro;q=0.3
-//        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393
-//        Accept-Encoding: gzip, deflate
-//        Host: localhost:6543
-//        Connection: Keep-Alive
-
-
