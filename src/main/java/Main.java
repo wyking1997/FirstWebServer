@@ -20,6 +20,7 @@ public class Main {
 //       the ServerSocket creates a server on the specific port number
 //       the server will run on the 6543 port number
         serverSocket = new ServerSocket(6543);
+        this.acceptRequests();
     }
 
     private void acceptRequests() throws Exception {
@@ -28,6 +29,9 @@ public class Main {
         while (true){
             Socket s = serverSocket.accept();
             ConnectionHandler ch = new ConnectionHandler(s);
+
+            //ch is a thread
+            ch.start();
         }
     }
 }
@@ -41,5 +45,18 @@ reponse generate the output witch goes back to the browser
 
 Tutorial:
   part1 ---> https://www.youtube.com/watch?v=WDoNm5Irf-4
-  part2 ---> https://www.youtube.com/watch?v=fcWR6RnZbBg
+  part2 ---> https://www.youtube.com/watch?v=fcWR6RnZbBg.
+  part3 ---> https://www.youtube.com/watch?v=eXv5H2Y_hF4
+  
 */
+
+//Request:
+//GET / HTTP/1.1
+//Accept: text/html, application/xhtml+xml, image/jxr, */*
+//        Accept-Language: en-US,en;q=0.8,ro-RO;q=0.5,ro;q=0.3
+//        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393
+//        Accept-Encoding: gzip, deflate
+//        Host: localhost:6543
+//        Connection: Keep-Alive
+
+

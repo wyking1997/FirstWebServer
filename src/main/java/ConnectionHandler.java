@@ -25,8 +25,18 @@ public class ConnectionHandler extends Thread {
 //    here we read the request and give the response
     @Override
     public void run(){
-        String reqS = "";
-        Request req = new Request(reqS);
-        Response res = new Response(req);
+        try {
+            String reqS = "";
+
+            //from br we have to read out request
+            while (br.ready())
+                reqS += (char) br.read();
+            System.out.println(reqS);
+
+            Request req = new Request(reqS);
+            Response res = new Response(req);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
